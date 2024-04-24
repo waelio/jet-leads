@@ -29,7 +29,6 @@ export default defineNuxtConfig({
     classSuffix: '',
   },
   quasar: QuasarOptions,
-
   nitro: {
     esbuild: {
       options: {
