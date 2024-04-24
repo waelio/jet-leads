@@ -69,7 +69,7 @@ onBeforeUnmount(() => {
       <div class="bg-slate-100 px-6 py-4">
         <div class="mb-4">
           <div class="mb-2 flex items-center gap-x-2 rounded-md bg-white px-3 py-1.5">
-            <UIcon
+            <q-icon
               name="i-heroicons-chat-bubble-bottom-center-text"
               class="h-6 w-6 font-semibold"
             />
@@ -83,7 +83,7 @@ onBeforeUnmount(() => {
         </div>
         <div>
           <div class="mb-2 flex items-center gap-x-2 rounded-md bg-white px-3 py-1.5">
-            <UIcon name="i-heroicons-user-group" class="h-6 w-6 font-semibold" />
+            <q-icon name="i-heroicons-user-group" class="h-6 w-6 font-semibold" />
             <div class="text-base">
               Users
             </div>
