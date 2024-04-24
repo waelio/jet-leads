@@ -53,14 +53,10 @@ onBeforeUnmount(() => {
     <div class="text-primary flex items-center justify-between">
       <div class="flex items-center gap-x-2">
         <q-icon
-          name="i-heroicons-chat-bubble-left-right"
-          class="h-6 w-6 font-semibold"
+          name="paper-airplane"
         />
       </div>
-      <div
-        class="bg-primary cursor-pointer px-3 py-1.5 text-white"
-        @click="navigateTo('/')"
-      >
+      <div class="bg-primary cursor-pointer px-3 py-1.5 text-white" @click="navigateTo('/')">
         Leave {{ $route.query.room }}
       </div>
     </div>
@@ -69,10 +65,6 @@ onBeforeUnmount(() => {
       <div class="bg-slate-100 px-6 py-4">
         <div class="mb-4">
           <div class="mb-2 flex items-center gap-x-2 rounded-md bg-white px-3 py-1.5">
-            <q-icon
-              name="i-heroicons-chat-bubble-bottom-center-text"
-              class="h-6 w-6 font-semibold"
-            />
             <div class="text-base">
               Room Name
             </div>
@@ -89,8 +81,7 @@ onBeforeUnmount(() => {
             </div>
           </div>
           <div
-            v-for="(user, i) in users"
-            :key="i"
+            v-for="(user, i) in users" :key="i"
             class="mb-2 ml-2 text-base text-gray-500 capitalize hover:text-gray-900"
             :class="{ 'border-b border-primary': user.username === route.query.username }"
           >
@@ -101,18 +92,14 @@ onBeforeUnmount(() => {
       <!-- Chat -->
       <div class="h-96 flex-1 overflow-y-auto px-8 py-10">
         <div
-          v-for="(chat, i) in chats"
-          :key="i"
-          class="mb-3 w-full flex bg-transparent"
-          :class="{
+          v-for="(chat, i) in chats" :key="i" class="mb-3 w-full flex bg-transparent" :class="{
             'justify-center': chat.username === 'NuxtChatapp Admin',
             'justify-end': chat.username === route.query.username,
             'justify-start': chat.username !== route.query.username,
           }"
         >
           <div
-            class="mb-3 w-1/2 rounded-md px-6 py-2"
-            :class="{
+            class="mb-3 w-1/2 rounded-md px-6 py-2" :class="{
               'bg-primary/20': chat.username === route.query.username,
               'bg-green-300': chat.username !== route.query.username,
             }"
@@ -134,21 +121,8 @@ onBeforeUnmount(() => {
     </div>
 
     <form @submit.prevent="sendMessage">
-      <q-input
-        v-model="message"
-        placeholder="Enter your message...."
-        :ui="{ padding: 'px-6 py-10' }"
-      >
-        <q-btn
-          icon="i-heroicons-paper-airplane"
-          size="xs"
-          color="primary"
-          variant="solid"
-          :trailing="false"
-          label="Send"
-          class="my-3"
-          type="submit"
-        />
+      <q-input v-model="message" placeholder="Enter your message...." :ui="{ padding: 'px-6 py-10' }">
+        <q-btn size="xs" color="primary" :trailing="false" label="Send" class="my-3" type="submit" />
       </q-input>
     </form>
   </q-card>

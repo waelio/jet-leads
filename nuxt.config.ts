@@ -1,5 +1,6 @@
 import { pwa } from './config/pwa'
 import { appDescription } from './constants/index'
+import { QuasarOptions } from './qusarOptions'
 
 export default defineNuxtConfig({
   devtools: { enabled: true },
@@ -27,7 +28,7 @@ export default defineNuxtConfig({
   colorMode: {
     classSuffix: '',
   },
-  quasar: { /* */ },
+  quasar: QuasarOptions,
 
   nitro: {
     esbuild: {
