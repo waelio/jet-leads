@@ -4,6 +4,10 @@
   "private": true,
   "packageManager": "pnpm@9.0.5",
   "description": "Jet Leads",
+  "engines": {
+    "npm": ">=8.0.0 <9.0.0",
+    "node": ">=18.0.0 <20.0.0"
+  },
   "scripts": {
     "build": "nuxi build",
     "dev:pwa": "VITE_PLUGIN_PWA=true nuxi dev",
