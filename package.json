@@ -1,7 +1,9 @@
 {
+  "name": "jet-leads",
   "type": "module",
   "private": true,
   "packageManager": "pnpm@9.0.5",
+  "description": "Jet Leads",
   "scripts": {
     "build": "nuxi build",
     "dev:pwa": "VITE_PLUGIN_PWA=true nuxi dev",
